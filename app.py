@@ -35,6 +35,8 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
+        self.pushButton.clicked.connect(self.on_click)
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -43,6 +45,10 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "Click Me!"))
         self.label.setText(_translate("MainWindow", "Hello World!"))
+    
+    def on_click(self):
+        print("clicked")
+        self.label.setText("You Clicked ME!!")
 
 
 if __name__ == "__main__":
