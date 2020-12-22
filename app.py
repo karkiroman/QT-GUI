@@ -49,8 +49,12 @@ class Ui_MainWindow(object):
     def on_click(self):
         print("clicked")
         self.label.setText("You Clicked ME!!")
+        self.one()
 
+    def one(self):
+        print("one!!")
 
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
